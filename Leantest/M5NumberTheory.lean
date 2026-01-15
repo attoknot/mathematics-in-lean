@@ -170,8 +170,9 @@ theorem exists_prime_factor {n : Nat} (h : 2 ≤ n) : ∃ p : Nat, Nat.Prime p �
     apply lt_of_le_of_ne _ mnen
     apply Nat.le_of_dvd _ mdvdn
     linarith
-  rcases ih m mltn mge2 _ with ⟨ p, hp ⟩
+  rcases ih m mltn mge2 primem with ⟨ p, hp ⟩
   use p
+  exact ⟨ hp.1, dvd_trans hp.2 mdvdn ⟩
 
 theorem primes_infinite : ∀ n, ∃ p > n, Nat.Prime p := by
   intro n
