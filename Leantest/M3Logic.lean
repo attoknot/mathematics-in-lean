@@ -1,5 +1,6 @@
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
+namespace M3Logic
 
 theorem my_lemma : ∀ {x y ε : ℚ}, 0 < ε → ε ≤ 1 → |x| < ε → |y| < ε → |x * y| < ε := by
   intros x y ε epos ele1 xlt ylt
@@ -522,3 +523,6 @@ theorem convergesTo_unique {s : ℕ → ℝ} {a b : ℝ}
   have tr : |a - b| ≤ |a - s N| + |s N - b| := dist_triangle a (s N) b
   rw [abs_sub_comm a (s N)] at tr
   linarith
+
+end Sequences
+end M3Logic

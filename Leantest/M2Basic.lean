@@ -8,6 +8,8 @@ import Mathlib.Tactic.Linarith.Frontend
 import Mathlib.Analysis.Complex.Exponential
 import Mathlib.Algebra.Divisibility.Basic
 
+namespace M2Basic
+
 example (a b c : ℕ) : a * b * c = b * (a * c) := by
   rw [Nat.mul_comm a b]
   rw [Nat.mul_assoc b a c]
@@ -307,3 +309,4 @@ example (x y : X) : 0 ≤ dist x y := by
   linarith
 
 end AlgebraicStructures2
+end M2Basic

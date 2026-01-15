@@ -1,5 +1,7 @@
 import Mathlib.Tactic
 
+namespace M6DiscreteMath
+
 section Finsets
 
 open Finset
@@ -328,3 +330,4 @@ theorem subst_eval_eq (a : PropForm)
     grind
 
 end Eval
+end M6DiscreteMath

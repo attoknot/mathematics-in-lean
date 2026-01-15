@@ -2,6 +2,8 @@ import Mathlib.Tactic
 import Mathlib.Data.Nat.Basic
 import Mathlib.Data.Int.Basic
 
+namespace M5NumberTheory
+
 open Nat
 
 section IrrationalRoots
@@ -453,4 +455,4 @@ theorem fib'_eq_fib (n : ℕ) : fib n = fib' n := by
 
 end
 end MoreInduction
-
+end M5NumberTheory

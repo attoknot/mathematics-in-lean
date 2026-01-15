@@ -1,6 +1,8 @@
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 
+namespace M4SetsAndFunctions
+
 section Sets
 
 variable {a : Type*}
@@ -529,15 +531,4 @@ theorem schroeder_bernstein {f : α → β} {g : β → α} (hf : Injective f) (
   ⟨sbFun f g, sb_injective f g hf, sb_surjective f g hg⟩
 
 end ShroderBernstein
-
-
-    
-    
-    
-    
-
-
-
-
-
-
+end M4SetsAndFunctions
